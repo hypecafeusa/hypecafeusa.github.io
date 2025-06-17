@@ -1,9 +1,212 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <Title> Mr. Magoo</Title>
-    </head>
-    <body>
-      <hi>Hello world, I'm Terrell</hi>
-      </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JSWEBPAGES Coding Classes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fffdf8;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+      padding: 20px;
+      color: #fff;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    /* Responsive Navigation */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background: #ffb6c1;
+        padding: 10px 0;
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      header h1 {
+        font-size: 1.5em;
+      }
+    }
+
+    .container {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: #ff69b4;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .class-card {
+      background: #fff8dc;
+      border: 2px solid #ffe4b5;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(255, 182, 193, 0.2);
+    }
+
+    .class-card h3 {
+      margin-top: 0;
+      color: #ff7f50;
+    }
+
+    .image-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info {
+      background: #e0ffff;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #b0e0e6;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+    .contact-info a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #ffe4e1;
+      font-size: 0.9em;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Coding Classes by JSWEBPAGES</h1>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav id="navMenu">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#">Classes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="about" class="section">
+      <h2>About Our Classes</h2>
+
+      <div class="class-card">
+        <h3>1. Intro to Programming</h3>
+        <p>Learn the fundamentals of programming including variables, loops, functions, and logic using beginner-friendly languages like Python. Perfect for those with no prior experience.</p>
+      </div>
+
+      <div class="class-card">
+        <h3>2. Web Development</h3>
+        <p>Build responsive and modern websites using HTML, CSS, and JavaScript. Gain experience with real-world projects and develop a personal portfolio.</p>
+      </div>
+
+      <div class="class-card">
+        <h3>3. Cybersecurity Training (Zero to Hero)</h3>
+        <p>This intensive training covers everything from the basics of cybersecurity to advanced ethical hacking techniques, preparing you for top industry certifications.</p>
+      </div>
+
+      <div class="image-container">
+        <img src="./images/training_image1.png" alt="Computer Training Image">
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="contact-info">
+        <p><strong>Contact Person:</strong> Terrell Alexander</p>
+        <p><strong>Email:</strong> <a href="mailto:terrellalexander2016@gmail.com">Terrell</a></p>
+        <p><strong>Phone:</strong> <a href="tel:4041112233">1-770-296-9058</a></p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 JSWEBPAGES Coding Classes. All rights reserved.
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
+
